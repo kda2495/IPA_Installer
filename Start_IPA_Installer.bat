@@ -1,0 +1,1 @@
+Powershell.exe -ExecutionPolicy Bypass -Command ".\IPA_Installer.ps1"
