@@ -1,2 +1,35 @@
+[![GitHub release](https://img.shields.io/github/v/release/kda2495/IPA_Installer.svg?label=Release)](https://github.com/kda2495/IPA_Installer/releases)
+[![License](https://img.shields.io/github/license/kda2495/IPA_Installer.svg?label=License&color=blue)](https://github.com/kda2495/IPA_Installer/blob/main/LICENSE)
+[![Downloads](https://img.shields.io/github/downloads/kda2495/IPA_Installer/total?label=Downloads&color=blue)](https://github.com/kda2495/IPA_Installer/releases)
+
 # IPA_Installer
-A PowerShell-script for installing apps on Apple devices (powered by ideviceinstaller).
+[![English README](https://img.shields.io/badge/README-English-blue.svg)](README_EN.md)  
+PowerShell-скрипт для установки приложений на устройства Apple (работает на базе ideviceinstaller).
+
+## Требования:
+• Windows 7-11 x64  
+• Установленный драйвер AppleMobileDeviceSupport (входит в состав iTunes):  
+[Ссылка для загрузки iTunes](https://www.apple.com/itunes/download/win64)  
+Вместо полной установки iTunes можно выполнить выборочную установку AppleMobileDeviceSupport64.msi, распаковав установщик iTunes любым архиватором  
+
+## Как использовать:
+**Переместите необходимые ipa-файлы в папку `IPA_Installer\Apps\`**
+**Дважды кликните по файлу `Start_IPA_Installer.bat`**  
+
+## Описание команд скрипта:
+#### 1. Установка приложений, загруженных в папку Apps
+• Предварительно необходимо установить iTunes с официального сайта Apple, либо пакет драйверов AppleMobileDeviceSupport (идут в комплекте с iTunes)  
+• Для установки необходимо подключить устройство к ПК через USB и разрешить подключение  
+• Для установки введите порядковые номера приложений (поддерживается ввод нескольких приложений, например: 1, 2, 3-5)  
+
+#### 2. Показать минимальную версию iOS для ipa файлов в папке Apps
+• Скрипт отобразит минимальную версию iOS для установки для ipa-файлов, находящихся в папке Apps  
+
+#### 3. Сменить язык (Change Language)
+• Смена языка скрипта  
+
+## Поддержка проекта:
+IPA_Installer полностью бесплатен, однако, если вы хотите безвозмездно поддержать проект, то можно это сделать по следующим реквизитам:  
+[Поддержать через CloudTips](https://pay.cloudtips.ru/p/e6f6c3f8)
+
+<img width="320" height="320" alt="qrCode" src="https://github.com/user-attachments/assets/231ada77-50c9-4dfb-add2-e5da77d4b345" />
