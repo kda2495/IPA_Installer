@@ -4,7 +4,7 @@
 
 # IPA_Installer
 [![English README](https://img.shields.io/badge/README-English-blue.svg)](README_EN.md)  
-PowerShell-скрипт для установки приложений на устройства Apple (работает на базе ideviceinstaller).
+PowerShell-скрипт для установки .ipa-файлов на устройства Apple (работает на базе ideviceinstaller).
 
 ## Требования:
 • Windows 7-11 x64  
@@ -13,8 +13,8 @@ PowerShell-скрипт для установки приложений на ус
 Вместо полной установки iTunes можно выполнить выборочную установку AppleMobileDeviceSupport64.msi, распаковав установщик iTunes любым архиватором  
 
 ## Как использовать:
-**Переместите необходимые ipa-файлы в папку `IPA_Installer\Apps\`**
-**Дважды кликните по файлу `Start_IPA_Installer.bat`**  
+**1\. Переместите необходимые .ipa-файлы в папку `IPA_Installer\Apps\`**  
+**2\. Дважды кликните по файлу `Start_IPA_Installer.bat`**  
 
 ## Описание команд скрипта:
 #### 1. Установка приложений, загруженных в папку Apps
