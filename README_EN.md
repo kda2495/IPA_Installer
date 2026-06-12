@@ -5,7 +5,7 @@
 
 # IPA_Downloader
 [![Russian README](https://img.shields.io/badge/README-Russian-blue.svg)](README.md)  
-PowerShell-script for installing apps on Apple devices (powered by ideviceinstaller).
+PowerShell script for installing apps on Apple devices (powered by ideviceinstaller).
 
 ## Requirements:
 • Windows 7-11 x64  
