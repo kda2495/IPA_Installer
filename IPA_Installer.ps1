@@ -1,4 +1,4 @@
-﻿Add-Type -TypeDefinition @"
+Add-Type -TypeDefinition @"
 using System;
 using System.Runtime.InteropServices;
 public class ConsoleFont {
@@ -37,7 +37,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 chcp 65001 > $null
 
 # Версия скрипта:
-Write-Host "IPA_Installer 1.0.0" -ForegroundColor Black -BackgroundColor Yellow
+Write-Host "IPA_Installer 1.0.1" -ForegroundColor Black -BackgroundColor Yellow
 
 # Файл языка скрипта:
 $LangConfigFile = ".\MainApp\Lang_Config.txt"
@@ -61,13 +61,13 @@ $LangStrings = @{
 		"ErrorInvalidInput" = "Ошибка: Неверный ввод."
 		"ErrorMissingFiles" = "Ошибка: Следующие файлы не найдены в папке MainApp:"
 		"ErrorNoApps" = "Ошибка: В папке Apps отсутствуют приложения."
-		"HeaderFileName" = "Название файла"
+		"HeaderFileName" = "Имя файла"
 		"HeaderMinIOS" = "Мин. iOS"
 		"InstallApp" = "Установка:"
 		"LangChanged" = "Язык успешно изменен на Русский."
 		"MenuTitle" = "Введите команду:"
-		"Menu1" = "1. Установка приложений, загруженных в папку Apps"
-		"Menu2" = "2. Показать минимальную версию iOS для ipa-файлов в папке Apps"
+		"Menu1" = "1. Установка приложений из папки Apps"
+		"Menu2" = "2. Проверка минимальной версии iOS для приложений в папке Apps"
 		"Menu3" = "3. Сменить язык (Change Language)"
 		"PressEnter" = "Нажмите Enter для выхода"
 	}
@@ -82,8 +82,8 @@ $LangStrings = @{
 		"InstallApp" = "Installing:"
 		"LangChanged" = "Language successfully changed to English."
 		"MenuTitle" = "Enter a command:"
-		"Menu1" = "1. Install apps downloaded to the Apps folder"
-		"Menu2" = "2. Show minimum iOS version for ipa files in Apps folder"
+		"Menu1" = "1. Install apps from Apps folder"
+		"Menu2" = "2. Check minimum iOS version for apps in Apps folder"
 		"Menu3" = "3. Change Language (Сменить язык)"
 		"PressEnter" = "Press Enter to exit"
 	}
@@ -231,7 +231,7 @@ $(Get-Lang 'Menu3')`n
 
 	$SwitchValue = Read-Host $MainMenu
 	switch ($SwitchValue) {
-		# 1. Установка приложений, загруженных в папку Apps:
+		# 1. Установка приложений из папки Apps:
 		"1" {
 			$IpaFiles = @(Get-ChildItem -Path ".\Apps\*.ipa" -ErrorAction SilentlyContinue)
 			
@@ -272,14 +272,8 @@ $(Get-Lang 'Menu3')`n
 				# Устанавливаем выбранные приложения:
 				foreach ($Idx in $SelectedIndices) {
 					$SelectedFile = $IpaFiles[$Idx - 1]
-					Separator
-					
-					# Дополнительно подтягиваем Мин. iOS для вывода в строку прогресса:
-					$Meta = Get-IPA-Metadata -IpaPath $SelectedFile.FullName
-					$MinOsSuffix = if ($Meta) { " [iOS $($Meta.MinIOS)+]" } else { "" }
-					
+					Separator	
 					Write-Host "$(Get-Lang 'InstallApp') $($SelectedFile.Name)$MinOsSuffix"
-					
 					$TempFile = "$env:TEMP\Temp.ipa"
 					Copy-Item -Path $SelectedFile.FullName -Destination $TempFile -Force
 					.\MainApp\ideviceinstaller.exe install $TempFile
@@ -291,7 +285,7 @@ $(Get-Lang 'Menu3')`n
 			}
 		}
 		
-		# 2. Показать минимальную версию iOS для ipa-файлов в папке Apps:
+		# 2. Проверка минимальной версии iOS для приложений в папке Apps:
 		"2" {
 			Get-iOS-MinVersion
 		}
