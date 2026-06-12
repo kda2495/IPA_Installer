@@ -37,7 +37,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 chcp 65001 > $null
 
 # Версия скрипта:
-Write-Host "IPA_Installer 1.0.1" -ForegroundColor Black -BackgroundColor Yellow
+Write-Host "IPA_Installer 1.0.2" -ForegroundColor Black -BackgroundColor Yellow
 
 # Файл языка скрипта:
 $LangConfigFile = ".\MainApp\Lang_Config.txt"
