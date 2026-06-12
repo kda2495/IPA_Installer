@@ -12,7 +12,6 @@ PowerShell-script for installing apps on Apple devices (powered by ideviceinstal
 • Installed AppleMobileDeviceSupport driver (included with iTunes):  
 [iTunes Download Link](https://www.apple.com/itunes/download/win64)  
 Instead of a full iTunes installation, you can perform a selective installation of `AppleMobileDeviceSupport64.msi` by extracting iTunes installer with any file archiver.  
-iTunes installer using any archive manager.  
 
 ## Features:
 • Install apps from Apps folder  
