@@ -5,7 +5,7 @@
 
 # IPA_Installer
 [![English README](https://img.shields.io/badge/README-English-blue.svg)](README_EN.md)  
-PowerShell-скрипт для установки приложений на устройства Apple (работает на базе ideviceinstaller).
+PowerShell скрипт для установки приложений на устройства Apple (работает на базе ideviceinstaller).
 
 ## Требования:
 • Windows 7-11 x64  
