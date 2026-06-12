@@ -1,10 +1,11 @@
 [![GitHub release](https://img.shields.io/github/v/release/kda2495/IPA_Installer.svg?label=Release)](https://github.com/kda2495/IPA_Installer/releases)
 [![License](https://img.shields.io/github/license/kda2495/IPA_Installer.svg?label=License&color=blue)](https://github.com/kda2495/IPA_Installer/blob/main/LICENSE)
 [![Downloads](https://img.shields.io/github/downloads/kda2495/IPA_Installer/total?label=Downloads&color=blue)](https://github.com/kda2495/IPA_Installer/releases)
+[![Downloads](https://img.shields.io/github/downloads/kda2495/IPA_Installer/latest/total?label=Downloads%20(latest)&color=blue)](https://github.com/kda2495/IPA_Installer/releases)
 
 # IPA_Installer
 [![English README](https://img.shields.io/badge/README-English-blue.svg)](README_EN.md)  
-PowerShell-скрипт для установки .ipa-файлов на устройства Apple (работает на базе ideviceinstaller).
+PowerShell-скрипт для установки приложений на устройства Apple (работает на базе ideviceinstaller).
 
 ## Требования:
 • Windows 7-11 x64  
